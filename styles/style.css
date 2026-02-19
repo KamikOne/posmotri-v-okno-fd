@@ -68,6 +68,7 @@ ol {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
+	object-position: center;
 }
 
 .search-form {
@@ -94,8 +95,8 @@ ol {
 }
 
 .search-form__textfield {
-  inline-size: 225px;
-  block-size: 27px;
+  min-inline-size: 225px;
+  min-block-size: 27px;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -260,6 +261,7 @@ ol {
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
+  min-block-size: 34px;
 }
 
 .button:hover {
@@ -281,13 +283,11 @@ ol {
 
 .search-form__submit-button {
   align-self: end;
-  block-size: 34px;
-  inline-size: 194px;
+  min-inline-size: 194px;
 }
 
 .more-button {
   inline-size: 100%;
-  block-size: 34px;
 }
 
 /* Кастомный скроллбар */
