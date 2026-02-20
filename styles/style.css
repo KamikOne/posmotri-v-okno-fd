@@ -12,8 +12,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -52,6 +50,7 @@ ol {
 
 .content {
   display: flex;
+	max-width: 1140px;
   align-items: end;
   inline-size: 100%;
   gap: 30px;
@@ -75,6 +74,7 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: start;
+	gap: 40px;
 }
 
 .search-form__fieldset {
@@ -100,12 +100,17 @@ ol {
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+  border-inline: 1px solid transparent;
   background-color: transparent;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   appearance: none;
   outline: none;
+}
+
+.search-form__textfield:active {
+  border-inline: 1px solid #fff;
 }
 
 .search-form__textfield::placeholder {
@@ -154,6 +159,8 @@ ol {
   font-weight: 700;
   line-height: 0.94;
   text-transform: uppercase;
+	max-width: 260px;
+	width: 100%;
 }
 
 .content__accent {
@@ -165,7 +172,9 @@ ol {
   align-self: stretch;
   display: flex;
   flex-direction: column;
+	width: 399px;
   gap: 26px;
+
 }
 
 .content__list {
@@ -228,6 +237,8 @@ ol {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+	line-height: 100%;
+	padding-block-end: 5px;
 }
 
 .content__video-card-description {
@@ -243,6 +254,7 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+  min-inline-size: 0;
 }
 
 .content__video-card-thumbnail {
@@ -259,9 +271,9 @@ ol {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 700;
-  text-transform: uppercase;
   cursor: pointer;
   min-block-size: 34px;
+	
 }
 
 .button:hover {
@@ -284,10 +296,12 @@ ol {
 .search-form__submit-button {
   align-self: end;
   min-inline-size: 194px;
+	padding: 6px 73.5px;
 }
 
 .more-button {
   inline-size: 100%;
+	padding: 6px 142px;
 }
 
 /* Кастомный скроллбар */
